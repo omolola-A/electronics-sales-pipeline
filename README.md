@@ -1,21 +1,21 @@
 # Electronics Sales Data Pipeline
 
-## 📖 Overview
+##  Overview
 This project automates the ingestion, cleaning, and storage of weekly electronics sales data using Apache Airflow and MySQL.
 
-## ⚙️ Features
+##  Features
 - Weekly scheduled pipeline
 - Data cleaning (null removal, duplicates)
 - MySQL data storage
 - Execution logging
 
-## 🛠️ Tools Used
+##  Tools Used
 - Apache Airflow
 - MySQL
 - Docker
 - Python (Pandas, SQLAlchemy)
 
-## ▶️ How to Run
+##  How to Run
 1. Start Docker:
    docker-compose up -d
 
@@ -25,8 +25,8 @@ This project automates the ingestion, cleaning, and storage of weekly electronic
 3. Trigger DAG:
    electronics_sales_pipeline
 
-## 📊 Dataset
+##  Dataset
 Sample dataset is included in the `/data` folder.
 
-## 📌 Author
+##  Author
 Omolola Adeojo # electronics-sales-pipeline
