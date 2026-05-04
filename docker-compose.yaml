@@ -17,7 +17,7 @@ services:
     command: ["--default-authentication-plugin=mysql_native_password"]
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: projectdb   # ✅ keep this
+      MYSQL_DATABASE: projectdb  
     ports:
       - "3307:3306"
     volumes:
@@ -62,7 +62,7 @@ services:
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
       _PIP_ADDITIONAL_REQUIREMENTS: "pandas sqlalchemy pymysql"
       AIRFLOW__CORE__LOAD_EXAMPLES: "False"
-      AIRFLOW__WEBSERVER__BASE_URL: "http://localhost:8080"   # ✅ correct
+      AIRFLOW__WEBSERVER__BASE_URL: "http://localhost:8080"   
     command: webserver
     ports:
       - "8080:8080"
@@ -82,7 +82,7 @@ services:
     environment:
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
       _PIP_ADDITIONAL_REQUIREMENTS: "pandas sqlalchemy pymysql"
-      AIRFLOW__WEBSERVER__BASE_URL: "http://localhost:8080"   # ✅ ADD THIS
+      AIRFLOW__WEBSERVER__BASE_URL: "http://localhost:8080"  
     command: scheduler
     user: "${AIRFLOW_UID:-50000}"
     volumes: 
